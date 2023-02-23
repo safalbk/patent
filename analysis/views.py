@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Profile
+from .models import Profile,CompanyDataTable,PatentDataTable,InventorsDataTable
 # Create your views here.
 
 def analysis(request):
@@ -18,4 +18,6 @@ def analysis(request):
 def cv(request):
     return render(request,'cv.html')
 def index(request):
+    # q = CompanyDataTable.objects.all()
+    # print(q)
     return render(request,'index.html')
